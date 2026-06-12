@@ -81,22 +81,46 @@ h1{
     font-size:18px;
 }
 
+.button-container{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
 .telegram-btn{
-    display:block;
-    width:100%;
+    flex:1;
+    min-width:calc(50% - 8px);
     background:#1997e6;
     color:white;
     text-decoration:none;
-    font-size:28px;
+    font-size:18px;
     font-weight:bold;
-    padding:18px;
+    padding:16px 12px;
     border-radius:15px;
-    margin:25px 0;
     transition:.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .telegram-btn:hover{
     background:#0d86d5;
+}
+
+@media(max-width:480px){
+    .telegram-btn{
+        min-width:100%;
+        flex:1 1 100%;
+        font-size:16px;
+        padding:14px 10px;
+    }
+    
+    .button-container{
+        flex-direction:column;
+        gap:10px;
+    }
 }
 
 .features{
@@ -150,12 +174,20 @@ h1{
 
     <div class="info">📊 Exclusive Insights & Daily Tips</div>
 
-    <!-- TOP BUTTON -->
-    <a class="telegram-btn"
-       href="https://t.me/+9ULGOOHKzA0wMmNl"
-       target="_blank">
-       ✈ JOIN TELEGRAM CHANNEL
-    </a>
+    <!-- BUTTONS SIDE BY SIDE -->
+    <div class="button-container">
+        <a class="telegram-btn"
+           href="https://t.me/+9ULGOOHKzA0wMmNl"
+           target="_blank">
+           ✈ JOIN CHANNEL
+        </a>
+
+        <a class="telegram-btn"
+           href="https://t.me/+g5n-Lo8KacZiNjE1"
+           target="_blank">
+           ✈ FREE CHANNEL
+        </a>
+    </div>
 
     <div class="features">
         <p>🔥 INTRADAY | OPTIONS | SWING ANALYSIS</p>
@@ -173,13 +205,6 @@ h1{
     <div class="learn">
         ✅ Learn, Analyse & Grow
     </div>
-
-    <!-- BOTTOM BUTTON -->
-    <a class="telegram-btn"
-       href="https://t.me/+g5n-Lo8KacZiNjE1"
-       target="_blank">
-       ✈ JOIN FREE TELEGRAM CHANNEL
-    </a>
 
 </div>
 
